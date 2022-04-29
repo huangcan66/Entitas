@@ -6,6 +6,8 @@ public class GameSystems : Feature {
         //Add(new AccelerateSystem(contexts));
         //Add(new MoveSystem(contexts));
         //Add(new ReachedFinishSystem(contexts));
+        Add(new FindTargetSystem(contexts));
         Add(new FightSystem(contexts));
+        //Add(new RoundResult(contexts));
     }
 }

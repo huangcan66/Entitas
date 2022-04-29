@@ -8,5 +8,5 @@
 //------------------------------------------------------------------------------
 using Entitas;
 
-public sealed partial class InputEntity : Entity {
+public sealed partial class GameStateEntity : Entity {
 }

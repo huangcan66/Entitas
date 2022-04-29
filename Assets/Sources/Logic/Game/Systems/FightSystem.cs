@@ -10,24 +10,32 @@ public sealed class FightSystem : IExecuteSystem {
 
     public void Execute() {
 
-
-        foreach (var e in _group.GetEntities())
+        foreach (var entity in _group.GetEntities())
         {
+            if (entity.target.targetEntity != null && entity.fight.hp > 0) { 
 
-        }
+                var hit = entity.fight.atk - entity.target.targetEntity.fight.def;
+                if (hit < 0)
+                {
+                    hit = 1;
+                }
+                entity.target.targetEntity.fight.hp -= hit;
 
-            foreach (var e in _group.GetEntities()) {
-            //var move = e.move;
-            //var pos = e.position;
-            //e.ReplacePosition(pos.x, pos.y + move.speed, pos.z);
-            //e.fight.atk;
-
-            if(e.target.targetEntity == null || e.target.targetEntity.fight.hp < 0)
-            {
-                
-                //e.target.targetEntity = 
+                if (entity.target.targetEntity.fight.hp <= 0)
+                {
+                    entity.target.targetEntity = null;
+                }
+                    
             }
+
         }
+
+        //foreach (var entity in _group.GetEntities())
+        //{
+        //    if (entity.fight.hp <= 0)
+        //        entity.RemoveFight();
+        //}
+
     }
 }
 

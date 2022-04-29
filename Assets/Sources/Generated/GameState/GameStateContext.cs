@@ -8,16 +8,16 @@
 //------------------------------------------------------------------------------
 using Entitas;
 
-public sealed partial class InputContext : Context<InputEntity> {
+public sealed partial class GameStateContext : Context<GameStateEntity> {
 
-    public InputContext()
+    public GameStateContext()
         : base(
-            InputComponentsLookup.TotalComponents,
+            GameStateComponentsLookup.TotalComponents,
             0,
             new ContextInfo(
-                "Input",
-                InputComponentsLookup.componentNames,
-                InputComponentsLookup.componentTypes
+                "GameState",
+                GameStateComponentsLookup.componentNames,
+                GameStateComponentsLookup.componentTypes
             )
         ) {
     }

@@ -14,10 +14,12 @@ public sealed class InitOpponentsSystem : IInitializeSystem {
         for(int i = 1; i < 10; i++) {
             var speed = Random.value * 0.02f;
             var e = _context.CreateEntity();
-            e.AddAsset(resourceName);
-            e.AddPosition(i + i, 0, 0);
-            e.AddMove(speed, speed);
-            e.AddFight(1,1,10,1);
+            //e.AddAsset(resourceName);
+            //e.AddPosition(i + i, 0, 0);
+            //e.AddMove(speed, speed);
+            e.AddFight(10, 1, 1);
+            e.AddTarget(null);
+            e.AddCamp(1);
         }
     }
 }
