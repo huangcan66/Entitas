@@ -8,6 +8,6 @@ public class GameSystems : Feature {
         //Add(new ReachedFinishSystem(contexts));
         Add(new FindTargetSystem(contexts));
         Add(new FightSystem(contexts));
-        //Add(new RoundResult(contexts));
+        Add(new RoundResult(contexts));
     }
 }

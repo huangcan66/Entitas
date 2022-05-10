@@ -31,6 +31,7 @@ public sealed class AddViewSystem : ReactiveSystem<GameEntity> {
             if(gameObject != null) {
                 gameObject.transform.parent = _viewContainer;
                 e.AddView(gameObject);
+                gameObject.name = e.position.x.ToString();
             }
         }
     }

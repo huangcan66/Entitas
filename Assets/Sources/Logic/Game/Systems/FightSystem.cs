@@ -10,9 +10,10 @@ public sealed class FightSystem : IExecuteSystem {
 
     public void Execute() {
 
+
         foreach (var entity in _group.GetEntities())
         {
-            if (entity.target.targetEntity != null && entity.fight.hp > 0) { 
+            if (entity.target.targetEntity != null && entity.fight.hp > 0 && entity.target.targetEntity.hasFight) { 
 
                 var hit = entity.fight.atk - entity.target.targetEntity.fight.def;
                 if (hit < 0)

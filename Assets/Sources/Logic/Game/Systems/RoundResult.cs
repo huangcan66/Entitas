@@ -13,7 +13,11 @@ public sealed class RoundResult : IExecuteSystem {
         foreach (var entity in _group.GetEntities())
         {
             if (entity.fight.hp <= 0)
-                entity.RemoveFight();
+            {
+                //entity.RemoveFight();
+                entity.isDestroyed = true;
+            }
+                
         }
 
     }
