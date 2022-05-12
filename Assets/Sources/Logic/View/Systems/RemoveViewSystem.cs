@@ -26,6 +26,7 @@ public sealed class RemoveViewSystem : ReactiveSystem<GameEntity> {
 	
 
     protected override void Execute(List<GameEntity> entities) {
+        Debug.Log("entities" + entities.Count);
         foreach(var e in entities) {
             Object.Destroy(e.view.gameObject);
             e.RemoveView();

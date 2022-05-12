@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour {
             .Add(new ViewSystems(contexts))
 
             // Destroy
-            .Add(new DestroySystem(contexts));
+            //.Add(new DestroySystem(contexts))
+            ;
     }
 }
